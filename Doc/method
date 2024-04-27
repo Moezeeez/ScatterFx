@@ -1,1 +1,14 @@
-hdhdh
+import MetaTrader5 as mt5
+import matplotlib.pyplot as plt
+
+# Create a ScatterFX object with the specified currency pairs for plotting
+scatterchart = ScatterFX("EURUSD", "GBPUSD")
+
+# Initialize the scatter plot by retrieving data points for the specified currency pairs
+set_x, set_y = scatterchart.Initializer()
+
+# Set the x and y axes for the scatter plot using the retrieved data points
+scatterchart.AxisSetter(set_x, set_y)
+
+# Create and display the scatter plot based on the initialized axes
+scatterchart.ScatterPlot()
